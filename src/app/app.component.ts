@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'punto1';
+  title = 'Punto #1 ';
+
+  constructor(private router:Router){}
+
+    Listar(){
+      this.router.navigate(["listar"]);
+    }
 }
